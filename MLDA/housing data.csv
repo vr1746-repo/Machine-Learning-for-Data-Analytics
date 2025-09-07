@@ -1,0 +1,11 @@
+ID,Location,Size(sqft),Rooms,Age (Years),Price (INR)
+1,Downtown ,1200,3,10,5000000
+2,Suburb,1500,4,5,6500000
+3,Uptown,1000,2,20,3800000
+4,Suburb,2000,5,NaN,7200000
+5,Downtown ,850,NaN,15,4200000
+6,Uptown,NaN,3,12,5600000
+7,Suburb,1100,3,7,4800000
+8,Downtown ,1750,4,3,7000000
+9,Uptown,950,2,25,3500000
+10,Suburb,1600,4,6,NaN
