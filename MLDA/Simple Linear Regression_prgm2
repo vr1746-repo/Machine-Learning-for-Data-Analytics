@@ -1,0 +1,41 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+# Load the dataset
+data = pd.read_csv("Employee_Details.csv")
+print("First few rows of the dataset:")
+print(data.head())
+
+# Features and target
+X = data[['average_montly_hours']]   # Independent variable
+y = data['last_evaluation']          # Dependent variable
+
+# Split the data into training and testing sets (80% train, 20% test)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Train the Linear Regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predictions
+y_pred = model.predict(X_test)
+
+# Print slope and intercept
+print("Slope (m):", model.coef_[0])
+print("Intercept (c):", model.intercept_)
+
+# Plot the actual vs predicted values
+plt.scatter(X_test, y_test, color='blue', label='Actual')
+plt.plot(X_test, y_pred, color='red', label='Regression Line')
+
+# Labels and title
+plt.xlabel('Average Working Hours in a month')
+plt.ylabel('Evaluation of Worker')
+plt.title('Simple Linear Regression:\nWorking Hours vs Worker Evaluation')
+plt.legend()
+plt.show()
