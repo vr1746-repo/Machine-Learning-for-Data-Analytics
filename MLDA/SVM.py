@@ -9,7 +9,7 @@ x = iris.data[:, :2]
 y = iris.target
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2,
 random_state=21)
-model = SVC(kernel=&#39;linear&#39;)
+model = SVC(kernel='linear')
 model.fit(x_train, y_train)
 y_pred = model.predict(x_test)
 print("Classification Report:\n";, classification_report(y_test,
