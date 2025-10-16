@@ -15,4 +15,4 @@ y_pred = model.predict(x_test)
 print(&quot;Classification Report:\n&quot;, classification_report(y_test,
 y_pred))
 cm = confusion_matrix(y_test, y_pred)
-print(&quot;Confusion Matrix:\n&quot;, cm)
+print("Confusion Matrix:\n";, cm)
